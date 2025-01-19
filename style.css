@@ -420,6 +420,11 @@ article .icon {
   height: 2.5rem;
 }
 
+.whatsapp-icon {
+  height: 2rem;
+  padding-bottom: 3px;
+}
+
 /* FOOTER SECTION */
 
 footer {
