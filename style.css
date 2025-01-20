@@ -327,9 +327,11 @@ section {
 }
 
 .details-container:hover {
-  background-color: rgba(200, 200, 200, 0.3); /* Darken the container on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a polished effect */
-  cursor: pointer; /* Change the cursor to a pointer for better UX */
+  background-color: rgba(150, 150, 150, 0.4);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 10px rgba(150, 150, 255, 0.5); /* Adds a soft glow */
+  transform: translateY(-5px);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .section-container {
@@ -536,6 +538,37 @@ footer p {
 }
 
 .education-entry strong {
+  color: #333; /* Highlighted text */
+}
+
+/* Achievements Container Styling */
+.achievements-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Spacing between entries */
+  text-align: left;
+}
+
+.achievement-entry {
+  padding: 1rem;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.achievement-entry h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.achievement-entry p {
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.achievement-entry strong {
   color: #333; /* Highlighted text */
 }
 

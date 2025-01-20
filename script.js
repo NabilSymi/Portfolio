@@ -7,7 +7,7 @@ function toggleMenu() {
 }
 
 // Typewriter effect for dynamic text
-const roles = ["Frontend Developer", "Data Analyst", "Graphic Designer"];
+const roles = ["Web App Developer", "Data Analyst", "Graphic Designer"];
 let roleIndex = 0;
 let charIndex = 0;
 const typingSpeed = 100;
