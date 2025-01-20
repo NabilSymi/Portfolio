@@ -14,7 +14,7 @@
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#experience">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -30,7 +30,7 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -43,7 +43,9 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Nabil Syahmi</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="section__text__p2">
+          <span id="dynamic-text"></span>
+        </p>        
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -71,6 +73,7 @@
         </div>
       </div>
     </section>
+    
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -84,15 +87,7 @@
         </div>
         <div class="about-details-container">
           <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
+            
             <div class="details-container">
               <img
                 src="./assets/education.png"
@@ -100,17 +95,33 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>Bachelors Degree (Honours)<br />Foundation IIUM</p>
+              <p>Bachelor of Information Technology (Honours)
+                <br />Foundation in Engineering and Computer Science
+                <br />Sijil Pelajaran Malaysia (SPM) </p>
             </div>
+            
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Award & Achievements</h3>
+              <p>INNOVATEX Top 3 Best Overall FYP2 Project
+                <br />Dean’s List Award
+                <br />University in Action Symposium | Silver Award </p>
+            </div>
+            
           </div>
           <div class="text-container">
             <p>
-                I am a dedicated final-year Information Technology student at the International Islamic University
-                Malaysia (IIUM) with a CGPA of 3.76. I am proficient in data analysis and visualization, software
-                development, project management, auditing, and creative multimedia design. Recognized for my strong
-                problem-solving abilities, adaptability, and collaborative mindset, I am seeking a Data Analyst Internship
-                opportunity from March 2025 to September 2025 (6 months) to align with my passion for Data
-                Analytics and Business Intelligence.
+              Hi, I’m Nabil Syahmi, a Digital Multimedia Design student and Junior Data Analyst with 
+              a passion for blending creativity and data-driven insights. My academic projects span 
+              diverse areas such as Web App Development, Data Visualization, and Graphic Design. 
+              I thrive on challenges that require both creative thinking and analytical problem-solving.
+              Whether it’s designing visually compelling graphics or deriving actionable insights from complex data, 
+              I enjoy crafting solutions that make an impact. I’m continually exploring new tools and technologies 
+              to expand my skill set and stay ahead in a dynamic industry.
             </p>
           </div>
         </div>
@@ -124,11 +135,82 @@
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <h1 class="title">Software Skills</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Design Software</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Adobe Illustrator</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Adobe Photoshop</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Adobe Indesign</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Canva</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Figma</h3>
+                  <p>Advanced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Blender</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Software Development</h2>
             <div class="article-container">
               <article>
                 <img
@@ -138,7 +220,7 @@
                 />
                 <div>
                   <h3>HTML</h3>
-                  <p>Experienced</p>
+                  <p>Advanced</p>
                 </div>
               </article>
               <article>
@@ -149,18 +231,7 @@
                 />
                 <div>
                   <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
+                  <p>Advanced</p>
                 </div>
               </article>
               <article>
@@ -171,55 +242,6 @@
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -230,7 +252,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Express JS</h3>
+                  <h3>SQl</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -241,7 +263,18 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Git</h3>
+                  <h3>Laravel</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>XAMPP</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -258,7 +291,7 @@
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <h1 class="title">Academic Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
@@ -353,7 +386,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <a href="https://mail.google.com/">nabilsyahmi228@gmail.com</a>
+          <a href="https://mail.google.com/">Email</a>
         </div>
         <div class="contact-info-container">
           <img
@@ -378,7 +411,7 @@
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#experience">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>

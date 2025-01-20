@@ -206,6 +206,28 @@ section {
   gap: 1rem;
 }
 
+#dynamic-text {
+  transition: opacity 0.5s ease-in-out;
+  position: relative; /* Ensure pseudo-element positioning works */
+  display: inline-block; /* Ensures proper alignment */
+  min-width: 150px; /* Prevents layout shifts */
+  height: 1.5em; /* Set the height to match the text size */
+  text-align: center; /* Keeps text aligned */
+}
+
+#dynamic-text::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /* ICONS */
 
 .icon {
