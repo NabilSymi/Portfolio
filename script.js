@@ -1,44 +1,76 @@
+// Function to toggle the hamburger menu
 function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
-  }
-  
-  const roles = ["Frontend Developer", "Data Analyst", "Graphic Designer"];
-  let roleIndex = 0; // Current role in the array
-  let charIndex = 0; // Current character in the role string
-  const typingSpeed = 100; // Typing speed in ms
-  const erasingSpeed = 50; // Erasing speed in ms
-  const delayBetweenRoles = 2000; // Delay before switching roles
-  const dynamicText = document.getElementById("dynamic-text");
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
 
-  function typeRole() {
+// Typewriter effect for dynamic text
+const roles = ["Frontend Developer", "Data Analyst", "Graphic Designer"];
+let roleIndex = 0;
+let charIndex = 0;
+const typingSpeed = 100;
+const erasingSpeed = 50;
+const delayBetweenRoles = 2000;
+const dynamicText = document.getElementById("dynamic-text");
+
+function typeRole() {
+  if (dynamicText) {
     if (charIndex < roles[roleIndex].length) {
-      // Add the next character
       dynamicText.textContent += roles[roleIndex].charAt(charIndex);
       charIndex++;
       setTimeout(typeRole, typingSpeed);
     } else {
-      // Wait before erasing
       setTimeout(eraseRole, delayBetweenRoles);
     }
   }
+}
 
-  function eraseRole() {
+function eraseRole() {
+  if (dynamicText) {
     if (charIndex > 0) {
-      // Remove the last character
       dynamicText.textContent = roles[roleIndex].substring(0, charIndex - 1);
       charIndex--;
       setTimeout(eraseRole, erasingSpeed);
     } else {
-      // Move to the next role
       roleIndex = (roleIndex + 1) % roles.length;
       setTimeout(typeRole, typingSpeed);
     }
   }
+}
 
-  // Start the typewriter effect
-  document.addEventListener("DOMContentLoaded", typeRole);
+document.addEventListener("DOMContentLoaded", typeRole);
 
-  
+// Modal functionality
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = "flex";
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Ensure all modals are hidden on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
+    modal.style.display = "none";
+  });
+});
+
+// Close the modal when clicking outside the modal content
+window.addEventListener("click", (event) => {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});

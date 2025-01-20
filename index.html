@@ -79,60 +79,86 @@
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+          <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
-            
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
+            <!-- Education Card -->
+            <div class="details-container" onclick="openModal('education-modal')">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
               <h3>Education</h3>
-              <p>Bachelor of Information Technology (Honours)
-                <br />Foundation in Engineering and Computer Science
-                <br />Sijil Pelajaran Malaysia (SPM) </p>
+              <p>Bachelor of Information Technology (Honours)<br />Foundation in Engineering and Computer Science<br />Sijil Pelajaran Malaysia (SPM)</p>
             </div>
-            
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
+            <!-- Awards & Achievements Card -->
+            <div class="details-container" onclick="openModal('achievements-modal')">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
               <h3>Award & Achievements</h3>
-              <p>INNOVATEX Top 3 Best Overall FYP2 Project
-                <br />Dean’s List Award
-                <br />University in Action Symposium | Silver Award </p>
+              <p>INNOVATEX Top 3 Best Overall FYP2 Project<br />Dean’s List Award<br />University in Action Symposium | Silver Award</p>
             </div>
-            
           </div>
           <div class="text-container">
             <p>
-              Hi, I’m Nabil Syahmi, a Digital Multimedia Design student and Junior Data Analyst with 
-              a passion for blending creativity and data-driven insights. My academic projects span 
-              diverse areas such as Web App Development, Data Visualization, and Graphic Design. 
-              I thrive on challenges that require both creative thinking and analytical problem-solving.
-              Whether it’s designing visually compelling graphics or deriving actionable insights from complex data, 
-              I enjoy crafting solutions that make an impact. I’m continually exploring new tools and technologies 
-              to expand my skill set and stay ahead in a dynamic industry.
+              Hi, I’m Nabil Syahmi, a Digital Multimedia Design student and Junior Data Analyst with a passion for blending creativity and data-driven insights. My academic projects span diverse areas such as Web App Development, Data Visualization, and Graphic Design. I thrive on challenges that require both creative thinking and analytical problem-solving. Whether it’s designing visually compelling graphics or deriving actionable insights from complex data, I enjoy crafting solutions that make an impact. I’m continually exploring new tools and technologies to expand my skill set and stay ahead in a dynamic industry.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    
+      <!-- Education Modal -->
+      <div id="education-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('education-modal')">&times;</span>
+          <h2>Education</h2>
+          <div class="education-details">
+            <!-- Entry 1 -->
+            <div class="education-entry">
+              <h3>International Islamic University Malaysia | Gombak, Selangor</h3>
+              <p><strong>Oct 2021 - Present</strong></p>
+              <p>Bachelor of Information Technology (Honours)</p>
+              <p><strong>CGPA:</strong> 3.76</p>
+              <p><strong>Previous Semester GPA:</strong> 4.00</p>
+              <img src="./assets/IIUM.png" alt="IIUM Logo" class="logo" />
+            </div>
+      
+            <!-- Entry 2 -->
+            <div class="education-entry">
+              <h3>Centre of Foundation Studies IIUM | Gambang, Pahang</h3>
+              <p><strong>Aug 2020 - Jun 2021</strong></p>
+              <p>Foundation in Engineering and Computer Science</p>
+              <p><strong>CGPA:</strong> 3.44</p>
+              <img src="./assets/IIUM.png" alt="IIUM Logo" class="logo" />
+            </div>
+      
+            <!-- Entry 3 -->
+            <div class="education-entry">
+              <h3>SBP Sekolah Dato’ Abdul Razak (SDAR) | Seremban, Negeri Sembilan</h3>
+              <p><strong>Jan 2015 - Dec 2019</strong></p>
+              <p>Sijil Pelajaran Malaysia (SPM)</p>
+              <p><strong>Result:</strong> 6A 3B</p>
+              <img src="./assets/SDAR.png" alt="SDAR Logo" class="logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    
+      <!-- Achievements Modal -->
+      <div id="achievements-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('achievements-modal')">&times;</span>
+          <h2>Award & Achievements</h2>
+          <ul>
+            <li>INNOVATEX Top 3 Best Overall FYP2 Project</li>
+            <li>Dean’s List Award</li>
+            <li>University in Action Symposium | Silver Award</li>
+          </ul>
+        </div>
+      </div>
     </section>
+    
+
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Software Skills</h1>
