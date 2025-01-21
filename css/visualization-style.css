@@ -205,66 +205,138 @@ a:hover {
     margin-bottom: 1rem;
   }
   
-  .infographic h2 {
-    margin-bottom: 20px;
-  }
-  
   .hero p {
     font-size: 1.2rem;
     color: #555;
   }
   
-  /* Infographic Section */
-  .infographic {
-    padding: 2rem 5%;
+/* Shared Section Styling */
+.shared-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  gap: 2rem;
+}
+
+.shared-container {
+  flex: 1 1 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scrollable Infographic or PDF Styling */
+.scrollable-content {
+  width: 100%; /* Full width */
+  max-height: 600px; /* Fixed height for both infographic and PDF */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  border: 1px solid #ddd; /* Optional border */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); /* Optional shadow */
+  display: block; /* Ensure proper block-level rendering */
+  padding: 0; /* Remove extra padding */
+  overflow-x: hidden;
+}
+
+.project-card {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.scrollable-content img {
+  width: 100%; /* Scale the image to fit horizontally */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Block-level rendering for proper flow */
+  margin: 0; /* Remove margins */
+  object-fit: contain; /* Ensure the entire image is visible */
+}
+
+.scrollable-content iframe {
+  width: 100%; /* Make the iframe responsive */
+  height: 600px; /* Match the infographic height */
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Description Container */
+.description-container {
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+
+.description-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.description-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Tools, Key Takeaways, and References Styling */
+.description-container h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.description-container ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.description-container ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.description-container ul li a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.description-container ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .shared-section {
+    flex-direction: column; /* Stack the content vertically */
     text-align: center;
-  }
-  
-  .infographic img {
-    max-width: 35%;
-    height: auto;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Group Project Section */
-  .group-project {
-    padding: 2rem 5%;
-    text-align: center;
-  }
-  
-  .group-project p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: #555;
-  }
-  
-/* PDF Viewer Section */
-.pdf-viewer {
-    margin-top: 2rem;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .pdf-viewer iframe {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* RESPONSIVE STYLES */
-  @media (max-width: 768px) {
-    .project-content img {
-      width: 100%;
-    }
-  
-    .description {
-      font-size: 0.9rem;
-    }
+  .shared-container {
+    max-width: 100%; /* Full width for small screens */
+    margin-bottom: 1.5rem;
   }
+
+  .description-container {
+    max-width: 100%; /* Full width for small screens */
+  }
+
+  .scrollable-content {
+    max-height: 400px; /* Reduced height for smaller screens */
+  }
+
+  .scrollable-content iframe {
+    height: 400px; /* Match the reduced infographic height */
+  }
+}
+
+
 
   /* FOOTER SECTION */
 
