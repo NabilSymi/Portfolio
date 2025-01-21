@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FYP Project - iParcel</title>
+  <link rel="stylesheet" href="fyp-style.css">
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section (Same as Main Page) -->
+  <nav id="desktop-nav">
+    <div class="logo"><a href="index.html">Nabil Syahmi</a></div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#experience">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo"><a href="index.html">Nabil Syahmi</a></div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="index.html#experience" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>  
+
+  <!-- Tab Navigation for Project Pages -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="fyp-project.html" class="active">FYP Project</a></li>
+      <li><a href="design-gallery.html">Design Gallery</a></li>
+      <li><a href="data-visualization.html">Data Visualization</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <section id="fyp-project">
+    <h1 class="title">iParcel: A Smart Parcel Management System</h1>
+    <p class="description">
+      The iParcel system was developed to address inefficiencies in parcel management and improve security for Mahallah Zubair residents. 
+      It streamlines parcel registration, scheduling, and collection processes, offering an intuitive interface for both users and administrators.
+    </p>
+
+    <!-- Main Project Image -->
+    <div class="main-image-container">
+      <img src="./assets/iparcel.png" alt="Main iParcel Project Screenshot" class="main-image">
+    </div>
+
+    <!-- Features Section -->
+    <section id="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li><strong>User Dashboard:</strong> Track parcels, schedule pickups (standard or urgent), and upload payment proofs.</li>
+        <li><strong>Admin Dashboard:</strong> Manage parcels, monitor user accounts, and generate automated reports.</li>
+        <li><strong>Scheduling:</strong> Flexible pickup scheduling with standard and urgent options, reducing congestion during peak hours.</li>
+        <li><strong>Reporting:</strong> Generate detailed summaries with visual graphs for parcel operations and revenue tracking.</li>
+      </ul>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots">
+      <h2>Screenshots</h2>
+      <div class="screenshot-grid">
+        <img src="./assets/iparcel2.jpg" alt="User Dashboard Screenshot" class="screenshot">
+        <img src="./assets/iparcel5.jpg" alt="Admin Dashboard Screenshot" class="screenshot">
+        <img src="./assets/iparcel4.jpg" alt="Report Page Screenshot" class="screenshot">
+      </div>
+    </section>
+
+    <!-- Tools Used Section -->
+    <section id="tools">
+      <h2>Tools Used</h2>
+      <ul>
+        <li><strong>Backend:</strong> Laravel PHP Framework, MySQL, XAMPP</li>
+        <li><strong>Frontend:</strong> Bootstrap, HTML/CSS, JavaScript</li>
+        <li><strong>Prototype:</strong> Figma</li>
+        <li><strong>Collaboration:</strong> GitHub</li>
+      </ul>
+    </section>
+  </section>
+
+  <!-- Footer Section (Same as Main Page) -->
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2025 Nabil Syahmi. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

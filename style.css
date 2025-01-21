@@ -5,6 +5,13 @@
 * {
   margin: 0;
   padding: 0;
+  max-width: 100vw; /* Restrict elements to viewport width */
+  box-sizing: border-box; /* Maintain padding and borders within width */
+}
+
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body doesn't exceed the screen width */
 }
 
 body {
@@ -252,12 +259,14 @@ section {
 }
 
 .btn-color-1,
-.btn-color-2 {
+.btn-color-2,
+.btn-color-3 {
   border: rgb(53, 53, 53) 0.1rem solid;
 }
 
 .btn-color-1:hover,
-.btn-color-2:hover {
+.btn-color-2:hover,
+.btn-color-3:hover {
   cursor: pointer;
 }
 
@@ -273,6 +282,16 @@ section {
 
 .btn-color-2 {
   background: none;
+}
+
+.btn-color-3 {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-3:hover {
+  background: white;
+  color: black;
 }
 
 .btn-color-2:hover {
@@ -328,8 +347,8 @@ section {
 
 .details-container:hover {
   background-color: rgba(150, 150, 150, 0.4);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 10px rgba(150, 150, 255, 0.5); /* Adds a soft glow */
-  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.05);
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
@@ -385,14 +404,25 @@ article .icon {
 }
 
 /* PROJECTS SECTION */
-
 #projects {
   position: relative;
+  padding: 2rem 0;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  background: rgb(245, 245, 245); /* Slightly darker for better visibility */
+  padding: 1.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: context-menu;
+}
+
+.color-container:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: none; /* No hover transformation */
+  background-color: rgb(245, 245, 245); /* Keep the same background */
+  cursor: context-menu;
 }
 
 .project-img {
@@ -402,13 +432,20 @@ article .icon {
 }
 
 .project-title {
-  margin: 1rem;
+  margin: 1rem 0;
   color: black;
 }
 
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .details-container {
+    flex: 0 0 100%; /* Full-width cards on smaller screens */
+    margin-bottom: 1rem;
+  }
+
+  .experience-details-container {
+    flex-direction: column;
+  }
 }
 
 /* CONTACT */
@@ -491,13 +528,19 @@ footer p {
 .modal-content {
   background: white;
   padding: 20px;
-  width: 50%;
+  width: 60%; /* Default size */
   border-radius: 10px;
   text-align: center;
-  z-index: 1001; /* Ensure it's above the overlay */
+  z-index: 1001;
   animation: slideDown 0.4s ease-in-out;
+  max-height: 90vh; /* Ensure it doesn't cover the entire height */
+  overflow-y: scroll; /* Enable scrolling if content overflows */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
+.modal-content::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
 
 /* Education Container Styling */
 .education-details {
@@ -608,6 +651,13 @@ footer p {
 /* Responsive Modal */
 @media (max-width: 768px) {
   .modal-content {
-    width: 80%;
+    width: 80%; /* Adjust width for smaller screens */
+    max-height: 80vh; /* Reduce height for smaller screens */
+    overflow-y: scroll; /* Enable scrolling */
+    scrollbar-width: none; /* Hide scrollbar */
+  }
+
+  .modal-content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
   }
 }
