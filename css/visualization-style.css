@@ -153,41 +153,51 @@ a:hover {
   transform: none;
 }
   
-  /* Navbar */
-  .navbar {
-    background-color: #333;
-    padding: 1rem 0;
-    text-align: center;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .navbar li {
-    display: inline;
-  }
-  
-  .navbar a {
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-  }
-  
-  .navbar a.active {
-    background-color: #007bff;
-  }
+/* Tab Navigation Styling */
+.project-tabs {
+  background-color: #f8f9fa; /* Light background for minimalism */
+  padding: 0.8rem 0; /* Add vertical padding */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Subtle shadow for separation */
+  margin-bottom: 2rem; /* Add space below tabs */
+}
 
-  /* HERO SECTION */
+.project-tabs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between tabs */
+}
+
+.project-tabs .tab-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem; /* Consistent font size */
+  color: #555; /* Neutral text color */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-tabs .tab-link:hover {
+  background-color: #007bff; /* On hover, blue background */
+  color: #fff; /* White text on hover */
+}
+
+.project-tabs .tab-link.active {
+  background-color: #007bff; /* Active tab background */
+  color: #fff; /* Active tab text color */
+  font-weight: 600; /* Slightly bolder text for active tab */
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3); /* Highlight active tab */
+}
+
+
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 2rem 1rem;
-    background-color: #f8f9fa;
+    padding: 2rem 5%;
   }
   
   .hero h1 {
@@ -195,54 +205,56 @@ a:hover {
     margin-bottom: 1rem;
   }
   
+  .infographic h2 {
+    margin-bottom: 20px;
+  }
+  
   .hero p {
     font-size: 1.2rem;
     color: #555;
   }
   
-  /* VISUALIZATION PROJECTS SECTION */
-  .visualization-projects {
+  /* Infographic Section */
+  .infographic {
     padding: 2rem 5%;
+    text-align: center;
   }
   
-  .project-card {
-    margin-bottom: 3rem;
+  .infographic img {
+    max-width: 35%;
+    height: auto;
+    margin: 0 auto;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 1.5rem;
-    background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .project-card:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .project-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .project-card h2 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  /* Group Project Section */
+  .group-project {
+    padding: 2rem 5%;
     text-align: center;
   }
   
-  .project-content img {
-    width: 30%;
+  .group-project p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
   }
   
-  .description {
+/* PDF Viewer Section */
+.pdf-viewer {
+    margin-top: 2rem;
     text-align: center;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
+  .pdf-viewer iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
   /* RESPONSIVE STYLES */
   @media (max-width: 768px) {
     .project-content img {

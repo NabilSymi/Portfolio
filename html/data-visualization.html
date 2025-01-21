@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Visualization Projects</title>
+  <link rel="stylesheet" href="../css/visualization-style.css">
+  <link rel="stylesheet" href="../css/mediaqueries.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <nav id="desktop-nav">
+    <div class="logo"><a href="../index.html">Nabil Syahmi</a></div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo"><a href="../index.html">Nabil Syahmi</a></div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="../index.html#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="../index.html#experience" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="../index.html#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="../index.html#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>  
+
+  <!-- Tab Navigation -->
+  <nav class="project-tabs">
+    <ul>
+      <li><a href="./fyp-project.html">FYP Project</a></li>
+      <li><a href="./design-gallery.html">Design Gallery</a></li>
+      <li><a href="./data-visualization.html" class="active">Data Visualization</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Data Visualization Projects</h1>
+    <p>Explore visual stories crafted from data, including infographics and interactive projects.</p>
+  </section>
+
+  <!-- Infographic Section -->
+  <section class="infographic">
+    <h2>Air Pollution Infographic</h2>
+    <div class="infographic-container">
+      <img src="../assets/infographic.svg" alt="Air Pollution Infographic">
+    </div>
+  </section>
+
+  <!-- Group Project Section -->
+  <section class="group-project">
+    <h2>Analyzing Income Disparities in Malaysia</h2>
+    <p>Explore our team's findings on income inequality across Malaysia, visualized using Tableau and other tools.</p>
+    <div class="pdf-viewer">
+      <iframe src="../assets/infovis-project.pdf" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#experience">Skills</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2025 Nabil Syahmi. All Rights Reserved.</p>
+  </footer>
+  <script src="../js/script.js"></script>
+</body>
+</html>

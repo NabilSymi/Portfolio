@@ -347,8 +347,7 @@ section {
 
 .details-container:hover {
   background-color: rgba(150, 150, 150, 0.4);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); 
   transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
@@ -419,7 +418,7 @@ article .icon {
 }
 
 .color-container:hover {
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
   transform: none; /* No hover transformation */
   background-color: rgb(245, 245, 245); /* Keep the same background */
   cursor: context-menu;
@@ -555,7 +554,7 @@ footer p {
   padding: 1rem;
   background-color: #f9f9f9; /* Light gray background for better readability */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for card-like appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Subtle shadow for card-like appearance */
 }
 
 /* Institution Logo Styling */
@@ -596,7 +595,7 @@ footer p {
   padding: 1rem;
   background-color: #f9f9f9; /* Light gray background */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Subtle shadow */
 }
 
 .achievement-entry h3 {
@@ -659,5 +658,11 @@ footer p {
 
   .modal-content::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align */
+    gap: 1rem; /* Adjust gap between rows */
   }
 }
