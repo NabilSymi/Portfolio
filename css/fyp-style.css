@@ -181,18 +181,19 @@ a:hover {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-tabs .tab-link:hover {
-  background-color: #007bff; /* On hover, blue background */
-  color: #fff; /* White text on hover */
-}
+/* Responsive Styling for Tabs */
+@media (max-width: 768px) {
+  .project-tabs ul {
+    justify-content: flex-start; /* Align tabs to the left */
+    gap: 1rem; /* Reduce spacing between tabs */
+    padding: 0 1rem; /* Add horizontal padding */
+  }
 
-.project-tabs .tab-link.active {
-  background-color: #007bff; /* Active tab background */
-  color: #fff; /* Active tab text color */
-  font-weight: 600; /* Slightly bolder text for active tab */
-  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3); /* Highlight active tab */
+  .project-tabs .tab-link {
+    font-size: 0.9rem; /* Slightly smaller text on smaller screens */
+    padding: 0.5rem; /* Adjust padding for compact design */
+  }
 }
-
   
   /* Project Section */
   #fyp-project {
