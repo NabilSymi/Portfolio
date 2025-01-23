@@ -224,17 +224,11 @@ a:hover {
  /* Project Grid */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3 columns per row */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
     column-gap: 0rem; /* Reduced horizontal gap (left and right cards) */
     row-gap: 3rem; /* Maintain sufficient vertical gap (top and bottom cards) */
     padding: 2rem 5%; /* Adjust padding to center content */
   }
-
-/* Center the last card if odd number */
-.project-grid > .project-card:nth-last-child(1):nth-child(odd) {
-    grid-column: auto; /* Do not span columns */
-    justify-self: center; /* Center align the card */
-}
   
   .project-card {
     background: white;

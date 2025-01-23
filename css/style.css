@@ -345,6 +345,8 @@ section {
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
+
+
 .details-container:hover {
   background-color: rgba(150, 150, 150, 0.4);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); 
@@ -382,25 +384,48 @@ section {
   flex-direction: column;
 }
 
-.article-container {
+.project-container {
   display: flex;
-  text-align: initial;
   flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
   justify-content: space-around;
+  gap: 2rem; /* Add spacing between items */
+}
+
+.software-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); 
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 1rem; /* Small gap between logos */
+  justify-items: center; /* Center align logos within the grid cells */
+  align-items: center; /* Vertically align logos */
+  padding: 1rem; /* Optional: add padding around the grid */
+}
+
+.article-container img {
+  width: 100px; /* Adjust size of logos */
+  height: 100px;
+  border-radius: 10px;
+  object-fit: contain; /* Ensure proper scaling without distortion */
+  background-color: #fff; /* Optional: consistent background */
 }
 
 article {
   display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align image and text */
   width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
-}
-
-article .icon {
-  cursor: default;
-}
+  text-align: center;
+}  
 
 /* PROJECTS SECTION */
 #projects {
@@ -445,6 +470,16 @@ article .icon {
   .experience-details-container {
     flex-direction: column;
   }
+
+  .article-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 item per row on smaller screens (mobiles) */
+  }
+
+  .article-container img {
+    width: 80px; /* Slightly smaller logos for small screens */
+    height: 80px;
+  }
+
 }
 
 /* CONTACT */
@@ -456,16 +491,41 @@ article .icon {
   height: 70vh;
 }
 
+.contact-details {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-details p {
+  margin: 0.5rem 0;
+}
+
+.contact-details strong {
+  color: #000; /* Highlight important details */
+}
+
+.contact-details a {
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  gap: 1rem; /* Adds spacing between clickable links */
   margin: 2rem auto;
-  padding: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #a3a3a3;
+  background-color: #fafafa;
 }
+
 
 .contact-info-container {
   display: flex;
@@ -660,9 +720,25 @@ footer p {
     display: none; /* Hide scrollbar */
   }
 
+  #contact {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .contact-details {
+    font-size: 0.9rem; /* Slightly reduce text size */
+  }
+
   .contact-info-upper-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align */
-    gap: 1rem; /* Adjust gap between rows */
+    flex-direction: column; /* Stack icons vertically on smaller screens */
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-info-container {
+    justify-content: flex-start; /* Align links to the left */
+  }
+
+  .contact-icon {
+    height: 2rem; /* Adjust icon size */
   }
 }
